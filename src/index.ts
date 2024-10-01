@@ -34,6 +34,8 @@
     `
     But this is not a good solution as it is redundant. We have to keep duplicating the class for every typ we need.
 */
+
+// The best solution is using template
 class KeyValuePair<TKey, TValue> {
     constructor(public key: TKey, public value: TValue){}
 }
