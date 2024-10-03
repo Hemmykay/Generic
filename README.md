@@ -19,5 +19,10 @@ let pair = new KeyValuePair('1', '2');
 ```
 
 **Generic Functions**
+```typescript
+    function wrapInArray<TValue>(value: TValue) {
+        return [value]
+    }
+```
 
 

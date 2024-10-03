@@ -36,9 +36,21 @@
 */
 
 // The best solution is using Generics Classes
-// 
+// Generic classes in typescript are the same as template classes in c++.
 class KeyValuePair<TKey, TValue> {
     constructor(public key: TKey, public value: TValue){}
 }
 
-let pair = new KeyValuePair('1', '2');
+let pair = new KeyValuePair( 1, '2');
+
+class ArrayUtils {
+
+    static wrapInArray<TValue>(value: TValue) {
+    return [value];
+}
+
+}
+
+
+
+let numbers = ArrayUtils.wrapInArray('1');
