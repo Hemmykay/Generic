@@ -27,4 +27,19 @@ let pair = new KeyValuePair('1', '2');
     let numbers = wrapInArray('1');
 ```
 
+**Generic Functions**
+```typescript
+function fetch<TData>(url: string): Result<TData> {
+    return { data: null, error: null };
+}
 
+interface User {
+    username: string;
+}
+
+interface Product {
+    title: string;
+}
+
+let result = fetch<User>('url');
+```
