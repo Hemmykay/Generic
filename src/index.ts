@@ -51,6 +51,24 @@ class ArrayUtils {
 
 }
 
-
-
 let numbers = ArrayUtils.wrapInArray('1');
+
+interface Result<Tdata> {
+    data: Tdata | null,
+    error: string | null
+}
+
+function fetch<TData>(url: string): Result<TData> {
+    return { data: null, error: null };
+}
+
+interface User {
+    username: string;
+}
+
+interface Product {
+    title: string;
+}
+
+let result = fetch<User>('url');
+//result.data.
